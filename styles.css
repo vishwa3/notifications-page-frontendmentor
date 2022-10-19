@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  background-color: hsl(210deg, 60%, 98%);
+}
+
+.main-container {
+  width: 95%;
+  max-width: 675px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 5px;
+  margin: 4rem 0 0 0;
+}
+
+.inner-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.inner-container .notification-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.inner-container .notification-header .badge {
+  background-color: hsl(219deg, 85%, 26%);
+  color: white;
+  padding: 0 0.6rem;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 200;
+  margin-left: 7px;
+}
+.inner-container .notification-header span {
+  color: hsl(219deg, 14%, 63%);
+  font-weight: 800;
+}
+.inner-container .notification-header span:hover {
+  cursor: pointer;
+}
+.inner-container .notifications-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+}
+.inner-container .notifications-list .unread {
+  background-color: hsl(210deg, 60%, 98%);
+}
+.inner-container .notifications-list .notification {
+  border-radius: 10px;
+}
+.inner-container .notifications-list .notification .inner-notification-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.inner-container .notifications-list .notification .inner-notification-container img {
+  height: 50px;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details {
+  width: 100%;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details .notification-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  color: gray;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details .notification-message .name {
+  color: hsl(224deg, 21%, 14%);
+  font-weight: 800;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details .notification-message .notification-type {
+  color: hsl(219deg, 12%, 42%);
+  font-weight: 800;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details .unread-icon {
+  height: 10px;
+  width: 10px;
+  background-color: hsl(1deg, 90%, 64%);
+  border-radius: 50%;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details p {
+  color: gray;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details .private-message {
+  border: 1px solid hsl(211deg, 68%, 94%);
+  padding: 1rem;
+  margin-top: 1rem;
+  color: hsl(219deg, 12%, 42%);
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details .picture-post {
+  justify-content: space-between;
+  -moz-column-gap: unset;
+       column-gap: unset;
+}
+.inner-container .notifications-list .notification .inner-notification-container .notification-details .picture-post img {
+  height: 40px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */

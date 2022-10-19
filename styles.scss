@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$white: hsl(0, 0%, 100%);
+$very-light-grayish-blue: hsl(210, 60%, 98%);
+$light-grayish-blue-1: hsl(211, 68%, 94%);
+$light-grayish-blue-2: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+$body-font: "Plus Jakarta Sans", sans-serif;
+
+body {
+  min-height: 100vh;
+  font-family: $body-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  background-color: $very-light-grayish-blue;
+}
+
+.main-container {
+  width: 95%;
+  max-width: 675px;
+  background-color: $white;
+  border-radius: 5px;
+  margin: 4rem 0 0 0;
+}
+
+.inner-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .notification-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .badge {
+      background-color: $blue;
+      color: white;
+      padding: 0 0.6rem;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 200;
+      margin-left: 7px;
+    }
+    span {
+      color: $grayish-blue;
+      font-weight: 800;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .notifications-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    .unread {
+      background-color: $very-light-grayish-blue;
+    }
+
+    .notification {
+      border-radius: 10px;
+      .inner-notification-container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: center;
+        img {
+          height: 50px;
+        }
+
+        .notification-details {
+          width: 100%;
+          .notification-message {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 10px;
+            color: gray;
+            .name {
+              color: $very-dark-blue;
+              font-weight: 800;
+            }
+            .notification-type {
+              color: $dark-grayish-blue;
+              font-weight: 800;
+            }
+          }
+          .unread-icon {
+            height: 10px;
+            width: 10px;
+            background-color: $red;
+            border-radius: 50%;
+          }
+          p {
+            color: gray;
+          }
+          .private-message {
+            border: 1px solid $light-grayish-blue-1;
+            padding: 1rem;
+            margin-top: 1rem;
+            color: $dark-grayish-blue;
+          }
+          .picture-post {
+            justify-content: space-between;
+            column-gap: unset;
+            img {
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 2rem;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
